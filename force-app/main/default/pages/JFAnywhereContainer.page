@@ -1,0 +1,15 @@
+<apex:page>
+    <apex:includeScript value="{!URLFOR($Resource.jotform, 'anywhere/JotformAnywhere.js')}"/>
+    <h1>Congratulations!! This is your new Page</h1>
+    <p>Hello {!$User.FirstName}!</p>
+    <div id="jf-anywhere-container"></div>
+    <script type="text/javascript">
+        if (window.JotformAnywhere) {
+            window.JotformAnywhere.launchFormBuilder({
+                openInModal: false,
+                fullscreen: true,
+                insertTo: "#jf-anywhere-container"
+            });
+        }
+    </script>
+</apex:page>
